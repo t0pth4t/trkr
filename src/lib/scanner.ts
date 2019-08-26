@@ -8,7 +8,8 @@ export const scanner = () => {
         const manufacturerData = peripheral.advertisement &&
          peripheral.advertisement.manufacturerData &&
           peripheral.advertisement.manufacturerData.toString('hex') || '';
-        console.info(`id: ${peripheral.id} uuid: ${peripheral.uuid}, rssi: ${peripheral.rssi} ${manufacturerData}`);
+          const serviceUuids = peripheral.advertisement && peripheral.advertisement.serviceUuids || '';
+        console.info(`id: ${peripheral.id} uuid: ${peripheral.uuid}, rssi: ${peripheral.rssi} serviceuuids: ${serviceUuids} ${manufacturerData}`);
     });
     noble.startScanning([], true);
 
