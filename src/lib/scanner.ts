@@ -5,7 +5,9 @@ export const scanner = () => {
     noble.on('onChange', (state:string) => {
         state === 'poweredOn' ? console.info('BLE On') : console.info('BLE Off');
     }).on('discover', (peripheral:Peripheral) =>{
-        const manufacturerData = peripheral.advertisement.manufacturerData.toString('hex');
+        const manufacturerData = peripheral.advertisement &&
+         peripheral.advertisement.manufacturerData &&
+          peripheral.advertisement.manufacturerData.toString('hex') || '';
         console.info(`id: ${peripheral.id} uuid: ${peripheral.uuid}, rssi: ${peripheral.rssi} ${manufacturerData}`);
     });
     noble.startScanning([], true);
