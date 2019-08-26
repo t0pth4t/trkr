@@ -8,6 +8,6 @@ export const scanner = () => {
         const manufacturerData = peripheral.advertisement.manufacturerData.toString('hex');
         console.info(`id: ${peripheral.id} uuid: ${peripheral.uuid}, rssi: ${peripheral.rssi} ${manufacturerData}`);
     });
-    noble.startScanning();
+    noble.startScanning([], true);
 
 };
