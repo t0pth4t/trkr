@@ -53,9 +53,9 @@
     "sha.js": "^2.4.11"
   },
   "devDependencies": {
-    "@abandonware/noble": "^1.9.2-3",
+    "@abandonware/noble": "^1.9.2-24",
     "@bitjson/npm-scripts-info": "^1.0.0",
-    "@types/noble": "^0.0.39",
+    "@types/noble": "^0.0.44",
     "ava": "2.2.0",
     "codecov": "^3.5.0",
     "cz-conventional-changelog": "^2.1.0",
@@ -65,10 +65,9 @@
     "prettier": "^1.18.2",
     "standard-version": "^6.0.1",
     "trash-cli": "^3.0.0",
-    "tslint": "^5.18.0",
+    "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-immutable": "^6.0.1",
-    "typescript": "^3.5.3"
+    "typescript": "^5.4.2"
   },
   "ava": {
     "failFast": true,
